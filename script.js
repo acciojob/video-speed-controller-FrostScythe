@@ -1,6 +1,6 @@
 // Select elements
 const player = document.querySelector('.player');
-const video = player.querySelector('.viewer');
+const video = player.querySelector('.player__video'); // FIXED
 const toggle = player.querySelector('.toggle');
 const skipButtons = player.querySelectorAll('[data-skip]');
 const ranges = player.querySelectorAll('.player__slider');
@@ -35,7 +35,6 @@ function handleRangeUpdate() {
 // Update progress bar
 function handleProgress() {
   const percent = (video.currentTime / video.duration) * 100;
-  progressBar.style.flexBasis = `${percent}%`;
   progressBar.style.width = `${percent}%`;
 }
 
